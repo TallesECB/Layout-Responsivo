@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Layout 02</title>
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            main {
+                padding: 10px;
+                position: relative;
+                width: 920px;
+                background: #efefef;
+                border: 1px solid #ccc;
+                margin: 10px auto;
+                overflow: auto;
+            }
+    /* HEADER */
+        /* posições */
+            .navhorizontal {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: stretch;
+                margin-left: 1px;
+            }
+    
+        /* fim posições */
+
+        /* estilizações */
+            header {
+                background-color: #999;
+                height: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            nav {
+                background-color: #ccc;;
+            }
+
+            #titulo {
+                padding-left: 10px;
+                color: white;
+                font-size: 25px;
+            }
+
+            li {
+                background-color: #ddd;
+                padding: 8px;
+                list-style: none;
+                margin: 0 3px;
+            }
+            
+            a {
+                text-decoration-style: none;
+            }
+            
+            #caixasearch {
+                padding-right: 10px;
+            }
+
+            #search {
+                background-color: white;
+                border: none;
+                -webkit-appearance: textfield;
+                background-color: white;
+                -webkit-rtl-ordering: logical;
+                cursor: text;
+                padding: 5px;
+                border-width: 2px;
+                border-style: inset;
+                border-color: initial;
+                border-image: initial;
+            }
+        /* fim estilizações */
+    /* FIM HEADER */
+
+        /* ======================================== */
+
+    /* SECTION */
+        /* posições */
+            section {
+                display: grid;
+                grid-template-columns: 9fr 3fr;
+            }
+
+            .modules {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: flex-start;
+                align-items: stretch;
+                padding-left: 10px;
+            }
+
+            #box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        /* fim posições */
+
+        /* estilizações */
+            .titlemodules {
+                padding-bottom: 15px;
+            }
+
+            .grid10 {
+                padding-top: 20px;
+                background-color: #efefef;
+            }
+
+            .grid2 {
+                padding-top: 20px;
+                background-color: #ebebeb;
+            }
+
+            #box {
+                width: 70px;
+                height: 60px;
+                padding: 5px;
+                margin: 5px;
+                background-color: #ddd;
+            }
+
+            .textos {
+                font-size: 20px;
+            }
+
+            .txts {
+                padding-bottom: 10px;
+            }
+
+            .titulodostextos {
+                font-size: 30px;
+                padding-bottom: 10px;
+            }
+        /* fim estilizações */
+    /* FIM SECTION */        
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <div id="caixatitulo">
+                    <p id="titulo">Site Name</p>
+                </div>
+
+                <div id="caixasearch">
+                    <input id="search" type="search" value="Search Site">
+                </div>
+            </header>
+
+            <nav>
+                <ul class="navhorizontal">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <div class="grid10">
+                    <div class="titletextos">
+                        <p class="titulodostextos"><b>Welcome to our website</b></p>
+                    </div>
+                    <div class="textos"> 
+                        <p class="txts">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        <p class="txts">Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                        <p class="txts">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue.</p>
+                        <p class="txts">Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>  
+                    </div>
+                </div>
+                <div class="grid2">
+                    <div class="titlemodules">
+                        <p><b>Popular CSS modules</b></p>
+                    </div>
+                    <div class="modules">
+                        <div id="box">
+                            <p>Css</p>
+                            <p>FlexBox</p>
+                        </div>
+                        <div id="box">
+                            <p>Css Multi-</p>
+                            <p>Column</p>
+                        </div>
+                        <div id="box">
+                            <p>Css</p>
+                            <p>Regions</p>
+                        </div>
+                        <div id="box">
+                            <p>Css Grid</p>
+                            <p>Layout</p>
+                        </div>
+                        <div id="box">
+                            <p>Css</p>
+                            <p>Shapes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
